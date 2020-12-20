@@ -8,9 +8,21 @@ use App\Proveedores;
 use App\Insumos;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Barryvdh\DomPDF\Facade as PDF;
 
 class ComprasController extends Controller
 {
+
+        public function exportPdf()
+    {
+        //
+
+          $compras=Compras::get();
+          $pdf = PDF::loadView('compras.index', compact('compras'));
+
+    return $pdf->download('compras_list.pdf');
+
+    }
     /**
      * Display a listing of the resource.
      *

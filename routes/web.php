@@ -23,7 +23,7 @@ Route::get('/login', function () {
 });
 //Route::get('/empleados','EmpleadosController@index');
 //Route::get('/empleados/create','EmpleadosController@create');
-
+Route::get('compras_list_pdf', 'ComprasController@exportPdf')->name('compras.pdf');
 Route::resource('empleados','EmpleadosController')->middleware('autenticacion');
 Route::resource('clientes','ClientesController');
 Route::resource('proveedores','ProveedoresController');

@@ -41,3 +41,9 @@
 	
 </table>
 <a href="{{url('')}}">Volver al menu Principal</a>
+<p></p>
+Clic<a href="{{route('compras.pdf')}}">
+aqui
+</a>
+para descargar PDF de compras
+</p>
