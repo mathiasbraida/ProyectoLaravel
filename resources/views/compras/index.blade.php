@@ -38,5 +38,6 @@
 		</tr>
 		@endforeach
 	</tbody>
-	<a href="{{url('')}}">Volver al menu Principal</a>
+	
 </table>
+<a href="{{url('')}}">Volver al menu Principal</a>

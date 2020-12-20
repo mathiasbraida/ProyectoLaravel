@@ -20,7 +20,7 @@ class CreateEmpleadosTable extends Migration
             $table->string('Correo')->unique();
             $table->string('Foto')->default('Sin Foto');
             $table->timestamps();
-            
+            $table->foreign('Correo')->references('email')->on('users');
 
             
         });

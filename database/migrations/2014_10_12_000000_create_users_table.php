@@ -17,10 +17,10 @@ class CreateUsersTable extends Migration
             $table->id();            
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password')->default('1234');
+            $table->string('password')->default('12345678');
             $table->rememberToken();
             $table->timestamps();
-            $table->foreign('email')->references('Correo')->on('empleados');
+          
             
             
         });

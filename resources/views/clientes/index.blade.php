@@ -40,3 +40,4 @@
 		@endforeach
 	</tbody>
 </table>
+<a href="{{url('')}}">Volver al menu Principal</a>

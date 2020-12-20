@@ -31,3 +31,10 @@ Route::resource('insumos','InsumosController');
 Route::resource('compras','ComprasController');
 Route::resource('compras_productos','ComprasProductosController');
 Route::resource('ventas','VentasController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
