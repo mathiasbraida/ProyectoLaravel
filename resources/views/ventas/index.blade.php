@@ -40,3 +40,9 @@
 	</tbody>
 </table>
 <a href="{{url('')}}">Volver al menu Principal</a>
+<p>
+Clic<a href="{{route('ventas.pdf')}}">
+aqui
+</a>
+para descargar PDF de Ventas
+</p>

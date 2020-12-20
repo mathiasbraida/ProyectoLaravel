@@ -18,7 +18,7 @@ class ComprasController extends Controller
         //
 
           $compras=Compras::get();
-          $pdf = PDF::loadView('compras.index', compact('compras'));
+          $pdf = PDF::loadView('reportes.reportecompra', compact('compras'));
 
     return $pdf->download('compras_list.pdf');
 

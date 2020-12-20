@@ -7,9 +7,20 @@ use App\Clientes;
 use App\Proveedores;
 use App\Insumos;
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade as PDF;
 
 class VentasController extends Controller
 {
+    public function exportPdf()
+    {
+        //
+
+          $ventas=Ventas::get();
+          $pdf = PDF::loadView('reportes.reporteventa', compact('ventas'));
+
+    return $pdf->download('ventas_list.pdf');
+
+    }
     /**
      * Display a listing of the resource.
      *

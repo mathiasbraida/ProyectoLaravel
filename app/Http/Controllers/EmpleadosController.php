@@ -5,9 +5,20 @@ namespace App\Http\Controllers;
 use App\Empleados;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Barryvdh\DomPDF\Facade as PDF;
 
 class EmpleadosController extends Controller
 {
+    public function exportPdf()
+    {
+        //
+
+          $empleados=Empleados::get();
+          $pdf = PDF::loadView('reportes.reporteempleado', compact('empleados'));
+
+    return $pdf->download('empleados_list.pdf');
+
+    }
     /**
      * Display a listing of the resource.
      *

@@ -23,6 +23,8 @@ Route::get('/login', function () {
 });
 //Route::get('/empleados','EmpleadosController@index');
 //Route::get('/empleados/create','EmpleadosController@create');
+Route::get('empleados_list_pdf', 'EmpleadosController@exportPdf')->name('empleados.pdf');
+Route::get('ventas_list_pdf', 'VentasController@exportPdf')->name('ventas.pdf');
 Route::get('compras_list_pdf', 'ComprasController@exportPdf')->name('compras.pdf');
 Route::resource('empleados','EmpleadosController')->middleware('autenticacion');
 Route::resource('clientes','ClientesController');
