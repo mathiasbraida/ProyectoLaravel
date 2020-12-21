@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Proyectito
+                    INSUMOLANDIA
                 </div>
 
                 <div class="links">

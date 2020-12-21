@@ -27,12 +27,12 @@ Route::get('empleados_list_pdf', 'EmpleadosController@exportPdf')->name('emplead
 Route::get('ventas_list_pdf', 'VentasController@exportPdf')->name('ventas.pdf');
 Route::get('compras_list_pdf', 'ComprasController@exportPdf')->name('compras.pdf');
 Route::resource('empleados','EmpleadosController')->middleware('autenticacion');
-Route::resource('clientes','ClientesController');
-Route::resource('proveedores','ProveedoresController');
-Route::resource('insumos','InsumosController');
-Route::resource('compras','ComprasController');
-Route::resource('compras_productos','ComprasProductosController');
-Route::resource('ventas','VentasController');
+Route::resource('clientes','ClientesController')->middleware('autenticacion');
+Route::resource('proveedores','ProveedoresController')->middleware('autenticacion');
+Route::resource('insumos','InsumosController')->middleware('autenticacion');
+Route::resource('compras','ComprasController')->middleware('autenticacion');
+//Route::resource('compras_productos','ComprasProductosController');
+Route::resource('ventas','VentasController')->middleware('autenticacion');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
